@@ -1,0 +1,14 @@
+name: demo workflow
+on: workflow_dispatch
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello message
+        run: echo "Hellooo, I am Banu"
+
+      - name: Print Multiple lines
+        run:  |
+         echo "For printing multi lines pipeline symbol is used"
+         echo "Hiii from Github Actions"
+         echo "job is a set of steps "
