@@ -1,7 +1,5 @@
 name: demo workflow
-on: 
-  schedule:
-    - cron: '20 9 * * *'
+on: workflow_dispatch
   
 jobs:
   say-hello:
@@ -9,5 +7,6 @@ jobs:
     steps:
       - name: Print hello message
         run: echo "Hellooo, I am Banu"
+        run: date
 
       
