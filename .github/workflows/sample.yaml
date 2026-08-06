@@ -1,7 +1,8 @@
 name: demo workflow
-on: schedule
-  - cron: '45 2 * * *'
-    timezone: Asia/Kolkata
+on: 
+  schedule:
+    - cron: '20 9 * * *'
+  
 jobs:
   say-hello:
     runs-on: ubuntu-latest
