@@ -1,13 +1,13 @@
 name: demo workflow
-on: workflow_dispatch
+on: 
+  schedule:
+    - cron: '*/10 * * * *'
   
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Print hello message
-        run:  |
-        echo "Hellooo, I am Banu"
-        date
+        run: echo "Hellooo, I am Banu"
 
       
