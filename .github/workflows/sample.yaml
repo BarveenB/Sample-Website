@@ -4,7 +4,7 @@ on: workflow_dispatch
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-    steps:
+    steps: |
       - name: Print hello message
         run: echo "Hellooo, I am Banu"
         run: date
