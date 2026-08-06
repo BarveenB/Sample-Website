@@ -1,5 +1,7 @@
 name: demo workflow
-on: workflow_dispatch
+on: schedule
+  - cron: '45 2 * * *'
+    timezone: Asia/Kolkata
 jobs:
   say-hello:
     runs-on: ubuntu-latest
@@ -7,8 +9,4 @@ jobs:
       - name: Print hello message
         run: echo "Hellooo, I am Banu"
 
-      - name: Print Multiple lines
-        run:  |
-         echo "For printing multi lines pipeline symbol is used"
-         echo "Hiii from Github Actions"
-         echo "job is a set of steps "
+      
