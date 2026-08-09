@@ -3,10 +3,31 @@ on: workflow_dispatch
  
   
 jobs:
-  say-hello:
+  build:
+    
     runs-on: ubuntu-latest
     steps:
-      - name: Print hello message
-        uses: actions/checkout@v7
+      - name: Print
+        run: echo build success
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo test success
+  push:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo push success
+  deploy:
+    needs: push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print
+        run: echo deploy success
+        
+
 
       
