@@ -3,10 +3,9 @@ name: PR Workflow
 on:
   pull_request:
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Print 
-      - run: echo "PR triggered!"
+      - name: Print
+        run: echo "PR triggered!"
